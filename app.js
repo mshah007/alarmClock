@@ -16,7 +16,7 @@ const alarmTextContainer = document.getElementById("alarm-text");
 const alarmText = (time) => `Alarm set at time ${time}`;
 
 // Initialize alarm sound
-alarmAudio.src = "/bell.wav";
+alarmAudio.src = "bell.wav";
 alarmAudio.load();
 
 // Handle Create Alarm submit
@@ -52,7 +52,7 @@ document.forms[0].addEventListener("submit", handleSubmit);
 
 // Function to check if alarm needs to be triggered
 const checkAlarm = (timeString) => {
-  if (alarmString === timeString) {
+  if (alarmString == timeString) {
     alarmAudio.play();
   }
 };
